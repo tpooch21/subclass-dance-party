@@ -29,5 +29,10 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+
+  $('.banana').on('click', function(event) {
+    $(this).toggle();
+  });
+
 });
 

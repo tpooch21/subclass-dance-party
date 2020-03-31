@@ -1,18 +1,19 @@
-var makeSpinnyDancer = function(top, left, timeBetweenSteps) {
+var makeSurpriseDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  // this.$node.css('border', '10px solid blue');
+  this.$node.addClass('spinner');
+  this.$node.html('<img class="banana" src="https://i.ya-webdesign.com/images/peanut-butter-jelly-time-png-3.png">');
 
 };
 
-makeSpinnyDancer.prototype = Object.create(makeDancer.prototype);
+makeSurpriseDancer.prototype = Object.create(makeDancer.prototype);
 
-makeSpinnyDancer.prototype.constructor = makeSpinnyDancer;
+makeSurpriseDancer.prototype.constructor = makeSurpriseDancer;
 
-makeSpinnyDancer.prototype.step = function() {
+makeSurpriseDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
 
   // Add spin functionality
-  this.$node.toggle();
+  this.$node.toggleClass('rotateY');
 };

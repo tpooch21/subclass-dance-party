@@ -25,3 +25,17 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.spinner{
+  border: none;
+
+}
+
+.banana {
+  height: 50px;
+}
+
+.rotateY {
+  transform: rotateY(180deg);
+  position: absolute;
+}
