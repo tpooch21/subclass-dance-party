@@ -2,7 +2,7 @@ var makeBouncyDancer = function(top, left, timeBetweenSteps, lineUp) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 
   this.$node.addClass('pacman');
-  this.$node.html('<img class="pacman" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Pacman.svg"/>')
+  this.$node.html('<img class="pacman" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Pacman.svg"/>');
   this.$node.addClass('lineUp');
 
 };
@@ -19,4 +19,3 @@ makeBouncyDancer.prototype.step = function() {
     }, 1000);
   }
 };
-

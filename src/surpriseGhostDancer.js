@@ -17,5 +17,4 @@ makeSurpriseDancer.prototype.step = function() {
 
   // Add spin functionality
   this.$node.toggleClass('rotateY');
-
 };
