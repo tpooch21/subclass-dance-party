@@ -3,8 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:#444444;
   font-size: 18px;
+  background-image: url('https://sfwallpaper.com/images/pacman-background-8.jpg')
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,17 +22,20 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
 
-.spinner{
+.ghost {
   border: none;
-
+  height: 50px;
 }
 
-.banana {
+.surprise {
+  border: none;
+}
+
+.pacman {
   height: 50px;
 }
 
