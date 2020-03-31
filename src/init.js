@@ -21,18 +21,30 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    window.dancers.push(dancer.$node);
   });
 
-  $('.banana').on('click', function(event) {
-    $(this).toggle();
+  $('.lineUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].hasClass('pacman')) {
+        window.dancers[i].removeClass('lineUp');
+      }
+      window.dancers[i].css('left', '100px');
+    }
   });
+
+  // $('.banana').on('mouseover', function(event) {
+  //   $(this).css('height', '120px');
+  // }).on('mouseleave', function(event) {
+  //   $(this).css('height', '50px');
+  // });
 
 });
 
