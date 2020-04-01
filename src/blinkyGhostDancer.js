@@ -2,7 +2,9 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node.html('<img class="ghost blinky" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469740-blinky.png"/>');
+  // Add class blinky for dispersement event handler
+  this.$node.addClass("blinky");
+  this.$node.html('<img class="ghost" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469740-blinky.png"/>');
 
 };
 

@@ -1,9 +1,8 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  // Updated every time through the loop after lineUpButton is clicked for proper vertical spacing between ghosts
   var fromTop = 35;
-  // Determines what actions to take within event handlers based on whether dancers are lined up
-  var lineUpButtonClicked = false;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -25,11 +24,13 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
+
+      var dancer = new dancerMakerFunction(
+        $("body").height() * Math.random(),
+        $("body").width() * Math.random(),
+        Math.random() * 1000
+      );
+
     $('body').append(dancer.$node);
 
     window.dancers.push(dancer.$node);
@@ -50,13 +51,13 @@ $(document).ready(function() {
     }
   });
 
+  // Changes images back to normal, can't figure out placement on page yet
   $('.disperseButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
       if (window.dancers[i].hasClass("blinky")) {
         window.dancers[i].html('');
         window.dancers[i].html('<img class="ghost" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469740-blinky.png"/>');
       } else if (window.dancers[i].hasClass("inky")) {
-        debugger;
         window.dancers[i].html('');
         window.dancers[i].html('<img class="ghost" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469741-inky.png"/>');
       }
