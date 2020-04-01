@@ -2,7 +2,8 @@ var makeSurpriseDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node.addClass('surprise');
+  // Add class inky for event dispersement handler
+  this.$node.addClass("inky");
   this.$node.html('<img class="ghost" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469741-inky.png"/>');
 
 

@@ -2,7 +2,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node.html('<img class="ghost" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469740-blinky.png"/>');
+  this.$node.html('<img class="ghost blinky" src="https://static.giantbomb.com/uploads/square_small/8/87790/2469740-blinky.png"/>');
 
 };
 
@@ -18,4 +18,5 @@ makeBlinkyDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
+
 
